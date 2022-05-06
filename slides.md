@@ -371,3 +371,20 @@ layout: default
     </div>
   </div>
 </div>
+
+---
+class: 'mybg'
+layout: center
+---
+
+<div class="text-7xl text-yellow-400 leading-loose text-shadow-lg font-medium">
+Slidev で<br>
+スライド作ってみた
+</div>
+
+<style>
+.mybg {
+  background: rgb(111,220,203);
+  background: linear-gradient(90deg, rgba(111,220,203,1) 0%, rgba(61,183,192,1) 26%, rgba(37,130,171,1) 100%);
+}
+</style>
