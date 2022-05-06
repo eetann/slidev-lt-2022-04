@@ -297,3 +297,77 @@ function add(
 asdfdkfjdls<br>
 sdjflsdjfs
 -->
+
+---
+layout: two-col-with-gif
+---
+<!-- 自作のコンポーネント`MyKbd`とレイアウト`two-col-with-gif`を使って書いた例 -->
+::title::
+# Google Calendar
+
+::j_feature::
+次の日
+
+::k_feature::
+前の日
+
+::default::
+<img class="h-88" src="/google-calendar.gif">
+
+::description::
+<MyKbd keybind="d" height=12 textSize="text-3xl">
+  ：[日]ビュー
+</MyKbd>
+
+---
+layout: default
+---
+<!-- 自作のコンポーネントとレイアウトを使わずに書いた例 -->
+<!-- 縦に要素を並べる -->
+<div class="h-full flex flex-col">
+  <!-- 1. 見出し -->
+  <h1>Google Calendar</h1>
+
+  <!-- 2. 「黄色の背景に文字」+「文字」の組み合わせが左右に並んだもの -->
+  <div class="grid grid-cols-2">
+    <!-- ショートカットキー 1 -->
+    <div class="flex items-center text-3xl">
+      <div class="bg-yellow-300 text-center leading-12 h-12 w-12">j</div>
+      ：
+      <p>次の日</p>
+    </div>
+    <!-- ショートカットキー 2 -->
+    <div class="flex items-center text-3xl">
+      <div class="bg-yellow-300 text-center leading-12 h-12 w-12">k</div>
+      ：
+      <p>前の日</p>
+    </div>
+  </div>
+
+  <!-- 下寄せ かつ 左右の端に要素を並べる -->
+  <div class="mt-auto flex justify-between">
+    <!-- 3. GIF -->
+    <img class="h-88" src="/google-calendar.gif">
+    <!-- 縦に要素を並べる -->
+    <div class="flex flex-col">
+      <!-- 上下中央 -->
+      <div class="my-auto">
+        <!-- 4. 説明欄 -->
+        <!-- ショートカットキー 3 -->
+        <div class="flex items-center text-3xl">
+          <div class="bg-yellow-300 text-center leading-12 h-12 w-12">d</div>
+          ：[日]ビュー
+        </div>
+      </div>
+      <!-- 5. ショートカットキーのヘルプ -->
+      <!-- 背景緑で中央に配置 -->
+      <div class="flex items-center bg-lime-300 h-12 p-4">
+        <!-- ショートカットキー 4 -->
+        <div class="flex items-center text-xl">
+          <div class="bg-yellow-300 text-center leading-8 h-8 w-8">?</div>
+            ： ショートカットのヘルプ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
